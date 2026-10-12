@@ -1,0 +1,175 @@
+<p>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="Claudia ‘Spa — masajes y bienestar. Un espacio de calma, cuidado y reconexión.">
+    <title>Claudia ‘Spa | Bienestar y relajación</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+</p>
+<style>
+    :root {
+      --pink:#f4c9d8; --rose:#b95778; --deep:#6d4055; --gold:#b98743;
+      --cream:#fffaf7; --blue:#dff1f4; --ink:#4f3d46; --white:#fff;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:Georgia,"Times New Roman",serif;color:var(--ink);background:linear-gradient(180deg,#fff8fb,#f7fbfc 55%,#fff7fa)}
+    a{color:inherit}
+    nav{position:sticky;top:0;z-index:10;background:rgba(255,250,247,.92);backdrop-filter:blur(12px);border-bottom:1px solid #edd6df}
+    .navin{max-width:1100px;margin:auto;padding:10px 20px;display:flex;align-items:center;justify-content:space-between;gap:15px}
+    .brandmini{font-family:cursive;color:var(--gold);font-size:1.35rem;white-space:nowrap}
+    .navlinks{display:flex;gap:18px;flex-wrap:wrap;justify-content:flex-end}
+    .navlinks a{text-decoration:none;font-size:.92rem;color:var(--deep)}
+    .hero{min-height:88vh;display:grid;place-items:center;position:relative;overflow:hidden;padding:50px 20px}
+    .hero:before{content:"";position:absolute;inset:-20%;background:
+     radial-gradient(circle at 12% 20%,rgba(244,201,216,.65),transparent 25%),
+     radial-gradient(circle at 88% 15%,rgba(214,239,244,.8),transparent 25%),
+     radial-gradient(circle at 50% 90%,rgba(255,226,236,.8),transparent 30%);z-index:-1}
+    .hero-card{max-width:1050px;width:100%;display:grid;grid-template-columns:250px 1fr;gap:45px;align-items:center;background:rgba(255,255,255,.72);border:1px solid rgba(185,135,67,.3);border-radius:36px;padding:38px;box-shadow:0 20px 70px rgba(125,70,95,.12)}
+    .logo{width:225px;height:225px;object-fit:cover;border-radius:50%;margin:auto;box-shadow:0 10px 35px rgba(185,135,67,.18)}
+    .kicker{letter-spacing:.22em;text-transform:uppercase;color:var(--rose);font-size:.8rem}
+    h1{font-size:clamp(3rem,7vw,6.2rem);line-height:.9;margin:12px 0;color:var(--gold);font-weight:500}
+    .script{font-family:cursive;color:var(--rose);font-size:clamp(1.4rem,3vw,2.3rem)}
+    .lead{font-size:1.15rem;line-height:1.8;max-width:650px}
+    .btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:25px}
+    .btn{display:inline-block;text-decoration:none;padding:13px 21px;border-radius:999px;font-family:Arial,sans-serif;font-weight:700}
+    .primary{background:var(--rose);color:white}
+    .secondary{border:1px solid var(--gold);color:var(--deep);background:white}
+    section{max-width:1100px;margin:auto;padding:80px 20px}
+    .section-title{text-align:center;font-size:2.7rem;color:var(--gold);font-weight:500;margin:0 0 10px}
+    .section-sub{text-align:center;max-width:700px;margin:0 auto 35px;line-height:1.7}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .card{background:white;border:1px solid #efdde4;border-radius:25px;padding:25px;box-shadow:0 12px 35px rgba(105,60,80,.08)}
+    .card h3{color:var(--rose);margin-top:0}
+    .card p,.card li{line-height:1.65}
+    .promo{background:linear-gradient(135deg,#fff,#fde8ef 55%,#e5f5f6);border:1px solid #e8c5d3;border-radius:34px;padding:40px;text-align:center;box-shadow:0 18px 50px rgba(100,60,80,.1)}
+    .price{font-size:2.5rem;color:var(--gold);font-weight:700;margin:10px}
+    .menu-img{width:100%;max-width:900px;display:block;margin:30px auto;border-radius:28px;box-shadow:0 20px 60px rgba(75,50,60,.15);border:5px solid white}
+    ul{padding-left:22px}
+    .service-list{columns:2;column-gap:40px}
+    .service-list li{break-inside:avoid;margin:8px 0;line-height:1.45}
+    .policy{background:#fff;border-radius:28px;padding:30px;border:1px solid #ecd9df}
+    .policy li{margin:12px 0;line-height:1.6}
+    .contact{text-align:center;background:linear-gradient(135deg,#f8dce6,#fff,#dff1f4);border-radius:35px;padding:55px 25px}
+    .whatsapp{display:inline-block;margin-top:18px;background:#a84e72;color:#fff;text-decoration:none;padding:15px 25px;border-radius:999px;font-family:Arial,sans-serif;font-weight:700;font-size:1.05rem}
+    footer{padding:35px 20px;text-align:center;color:#7a5a68;border-top:1px solid #ecdce2}
+    .small{font-size:.9rem;opacity:.8}
+    @media(max-width:760px){
+     .hero-card{grid-template-columns:1fr;padding:25px;gap:20px;text-align:center}
+     .logo{width:180px;height:180px}
+     .grid{grid-template-columns:1fr}
+     .service-list{columns:1}
+     .navlinks{display:none}
+     section{padding:60px 16px}
+    }
+</style>
+
+
+
+<nav>
+    <div class="navin">
+        <div class="brandmini">Claudia ‘Spa 🪷</div>
+        <div class="navlinks">
+            <a href="#inicio">Inicio</a>
+            <a href="#servicios">Servicios</a>
+            <a href="#promo">Promo del mes</a>
+            <a href="menu-servicios.pdf" download>Descargar Menú de Servicios (PDF)</a>
+            <a href="#politicas">Políticas</a>
+            <a href="#contacto">Contacto</a>
+        </div>
+    </div>
+</nav>
+
+<header class="hero" id="inicio">
+    <div class="hero-card">
+
+        <img src="Logo.png" width="250px">
+        <div>
+            <div class="kicker">Masajes · bienestar · cuidado personal</div>
+            <h1>Claudia ‘Spa</h1>
+            <div class="script">Un espacio para pausar, respirar y reconectar contigo.</div>
+            <p class="lead">Un lugar creado con cariño para regalarle a tu cuerpo un momento de calma, atención y bienestar. Cada sesión está pensada para que te sientas cuidada y acompañada.</p>
+            <div class="btns">
+                <a class="btn primary" href="https://wa.me/525516508318?text=Hola%20Claudia%20Spa%2C%20quiero%20informaci%C3%B3n%20sobre%20una%20cita." target="_blank">💬 Escribirme por WhatsApp</a>
+                <a class="btn secondary" href="#servicios">Conocer servicios</a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section id="servicios">
+    <h2 class="section-title">Servicios</h2>
+    <p class="section-sub">Masajes y tratamientos para distintos momentos y necesidades, con atención personalizada y un ambiente sereno. A continuación te mostramos algunos de los masajes que temosn, si quieres consulta la oferta completa haz <a href="menu-servicios.pdf" download>clic aquí</a>.</p>
+    <div class="card">
+        <ul class="service-list">
+            <li>Masaje relajante</li>
+            <li>Masaje facial</li>
+            <li>Masaje con piedras calientes</li>
+            <li>Masaje de tejido profundo (descontracturante)</li>
+            <li>Masaje sueco</li>
+            <li>Masaje hawaiano (lomí lomí)</li>
+            <li>Masaje de drenaje linfático manual</li>
+            <li>Masaje shiatsu</li>
+            <li>Masaje tailandés</li>
+            <li>Masaje ayurveda</li>
+            <li>Masaje para pacientes geriátricos</li>
+            <li>Masaje facial con hielo</li>
+            <li>Masaje para lumbalgia</li>
+            <li>Masaje con bambú</li>
+            <li>Masaje deportivo</li>
+            <li>Masaje kobido facial antiedad</li>
+            <li>Masaje relajante con atenuación de chakras</li>
+            <li>Masaje con cuarzos</li>
+            <li>Masaje con piedras</li>
+            <li>Masaje modelador con varas de bambú</li>
+            <li>Masaje californiano</li>
+            <li>Reflexología facial</li>
+            <li>Termoterapia</li>
+            <li>Alteraciones lumbares</li>
+            <li>Masaje para pacientes con fibromialgia</li>
+            <li>Masaje de cabeza, cuello y hombros</li>
+        </ul>
+    </div>
+</section>
+
+<section id="promo">
+    <div class="promo">
+        <div class="kicker">✨ Promo de octubre ✨</div>
+        <h2 class="section-title">Consiéntete o regala</h2>
+        <p class="script">Masaje californiano + Alineación de chakras</p>
+        <div class="price">$750</div>
+        <p>Un momento para bajar el ritmo y volver a ti.</p>
+        <a class="btn primary" href="https://wa.me/525516508318?text=Hola%20Claudia%20Spa%2C%20me%20interesa%20la%20Promo%20de%20octubre." target="_blank">Quiero información</a>
+    </div>
+</section>
+
+<section id="politicas">
+    <h2 class="section-title">Políticas de cita</h2>
+    <p class="section-sub">Para cuidar tu tiempo y el mío, te pido considerar estas condiciones antes de agendar.</p>
+    <div class="policy">
+        <ol>
+            <li><strong>Anticipo:</strong> se solicita un anticipo de $100 para reservar tu cita. El anticipo no es reembolsable.</li>
+            <li><strong>Reagendar:</strong> si deseas reagendar, deberá ser con un máximo de 24 horas de anticipación. Posterior a ese tiempo, la cita no podrá ser reagendada y, en caso de no acudir, se perderá el anticipo.</li>
+            <li><strong>Tolerancia:</strong> el tiempo de tolerancia es de 15 minutos. Después de ese tiempo la cita queda cancelada y el anticipo se pierde.</li>
+            <li><strong>Indicaciones:</strong> si no se acude a la cita siguiendo las indicaciones enviadas, no se realizará el servicio y se perderá el anticipo.</li>
+            <li><strong>Acompañantes:</strong> no se permite ningún tipo de acompañante, excepto adultos mayores y menores de edad si son ellos quienes recibirán el servicio.</li>
+        </ol>
+    </div>
+</section>
+
+<section id="contacto">
+    <div class="contact">
+        <div class="kicker">🪷 Agenda tu momento de bienestar</div>
+        <h2 class="section-title">Estoy para atenderte</h2>
+        <p class="lead" style="margin:0 auto">Escríbeme por WhatsApp para conocer disponibilidad, resolver tus dudas y elegir el servicio ideal para ti.</p>
+        <a class="whatsapp" href="https://wa.me/525516508318?text=Hola%20Claudia%20Spa%2C%20quiero%20agendar%20una%20cita." target="_blank">WhatsApp · 55 1650 8318</a>
+        <p class="small">Claudia ‘Spa · Masajista profesional certificada</p>
+    </div>
+</section>
+
+<footer>
+    <div class="script">Gracias por confiar en Claudia ‘Spa 🩷🪷</div>
+    <p class="small">© 2026 Claudia ‘Spa · Todos los derechos reservados</p>
+</footer>
