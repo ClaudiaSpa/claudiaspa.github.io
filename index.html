@@ -64,6 +64,28 @@
      .service-list{columns:1}
      .navlinks{display:none}
      section{padding:60px 16px}
+/* Esto se activará SOLO en pantallas de celulares y tabletas pequeñas */
+@media (max-width: 768px) {
+    .navin {
+        display: flex;
+        flex-direction: column; /* Alinea el logo arriba y los enlaces abajo */
+        align-items: center;
+        padding: 10px;
+    }
+
+    .navlinks {
+        display: flex;
+        flex-wrap: wrap;       /* Permite que los enlaces pasen a la siguiente línea si no caben */
+        justify-content: center;
+        gap: 12px;             /* Deja un espacio cómodo entre cada enlace para que se pueda tocar con el dedo */
+        margin-top: 10px;
+    }
+
+    .navlinks a {
+        font-size: 0.9rem;     /* Reduce un poquitito la letra en el celular para que quepa mejor */
+        padding: 4px 8px;      /* Les da un área de clic más cómoda */
+    }
+}
     }
 </style>
 
@@ -74,7 +96,7 @@
             <a href="#inicio">Inicio</a>
             <a href="#servicios">Servicios</a>
             <a href="#promo">Promo del mes</a>
-            <a href="menu-servicios.pdf">Descargar Menú de Servicios (PDF)</a>
+            <a href="menu-servicios.pdf" target="_blank">Descargar Menú de Servicios (PDF)</a>
             <a href="#politicas">Políticas</a>
             <a href="#contacto">Contacto</a>
         </div>
@@ -100,7 +122,7 @@
 
 <section id="servicios">
     <h2 class="section-title">Servicios</h2>
-    <p class="section-sub">Masajes y tratamientos para distintos momentos y necesidades, con atención personalizada y un ambiente sereno. A continuación te mostramos algunos de los masajes de nuestro menú. Cualquier masaje de tu elección tiene un costo de <span class="price-small">$550</span>. Si quieres consultar la oferta completa haz <a href="menu-servicios.pdf">clic aquí</a>.</p>
+    <p class="section-sub">Masajes y tratamientos para distintos momentos y necesidades, con atención personalizada y un ambiente sereno. A continuación te mostramos algunos de los masajes de nuestro menú. Cualquier masaje de tu elección tiene un costo de <span class="price-small">$550</span>. Si quieres consultar la oferta completa haz <a href="menu-servicios.pdf" target="_blank">clic aquí</a>.</p>
     <div class="card">
         <ul class="service-list">
             <li>Masaje relajante</li>
